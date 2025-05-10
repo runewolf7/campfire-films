@@ -11,7 +11,7 @@ export default function Home() {
         </div>
         <p className='text-lg'><strong>Campfire Films</strong></p>
         
-        <p className='text-gray-400'>Coming soon to Dayton, Ohio...</p>
+        <p className='text-gray-400'>Coming soon to Dayton, Ohio</p>
 
       </main>
     </div>

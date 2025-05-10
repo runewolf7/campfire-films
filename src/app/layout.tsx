@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Campfire Films| Coming Soon",
+  title: "Campfire Films | Coming Soon",
   description: "A film company based out of Dayton, Ohio",
 };
 
