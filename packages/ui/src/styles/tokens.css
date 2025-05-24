@@ -1,5 +1,5 @@
-:root {}
-
-.dark {}
-
-@layer base {}
+@layer tokens {
+    :root {}
+    
+    .dark {}
+}
