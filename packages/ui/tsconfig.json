@@ -6,6 +6,6 @@
       "@campfire/ui/*": ["./src/*"]
     }
   },
-  "include": ["."],
+  "include": [".", ".stylelint.config.js"],
   "exclude": ["node_modules", "dist"]
 }

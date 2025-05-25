@@ -3,7 +3,6 @@ const config = {
   extends: [
     'stylelint-config-standard',
     'stylelint-config-css-modules',
-    'stylelint-config-prettier'
   ],
   plugins: ['stylelint-order'],
   rules: {

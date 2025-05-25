@@ -1,5 +1,9 @@
 @layer tokens {
-    :root {}
+    :root {
+        /* Core color tokens */
+    }
     
-    .dark {}
+    .dark {
+        /* Dark mode color tokens */
+    }
 }

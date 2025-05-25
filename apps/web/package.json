@@ -27,6 +27,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "stylelint": "^16.19.1",
     "typescript": "^5.7.3"
   }
 }
