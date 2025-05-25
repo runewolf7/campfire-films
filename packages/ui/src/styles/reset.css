@@ -1,4 +1,7 @@
 @layer reset {
-    @import 'modern-normalize/modern-normalize.css';
-    -webkit-font-smoothing: antialiased;
+    @import url('modern-normalize/modern-normalize.css');
+
+    html {
+        -webkit-font-smoothing: antialiased;
+    }
 }

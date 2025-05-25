@@ -1,0 +1,5 @@
+{
+    "stylelint.validate": ["css"],
+    "stylelint.configFile": "./packages/ui/stylelint.config.js"
+
+}

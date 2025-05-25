@@ -1,1 +1,5 @@
-@layer base {}
+@layer base {
+    .test {
+        display: none
+    }
+}

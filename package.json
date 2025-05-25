@@ -6,8 +6,9 @@
     "build": "turbo build",
     "clean:modules": "pnpm --recursive --parallel exec rm -rf node_modules; rm -rf node_modules;",
     "dev": "turbo dev",
-    "check:lint": "turbo lint",
-    "fix:format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "lint:js": "turbo lint:js",
+    "lint:js:fix": "turbo lint:js:fix",
+    "format:fix": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
     "@campfire/config-eslint": "workspace:*",
