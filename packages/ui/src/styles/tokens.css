@@ -1,6 +1,61 @@
 @layer tokens {
     :root {
-        /* Core color tokens */
+        /* SPACING */
+        --space-2: 2px;
+        --space-4: 4px;
+        --space-8: 8px;
+        --space-16: 16px;
+        --space-32: 32px;
+        --space-64: 64px;
+        --space-96: 96px;
+        --space-128: 128px;
+
+        /* RADIUS */
+        --radius-tiny: 2px; /* Tiny radius for subtle rounding */
+        --radius-small: 4px; /* Small radius for buttons, inputs */
+        --radius-medium: 8px; /* Medium radius for cards, containers */
+        --radius-large: 16px; /* Large radius for modals, overlays */
+        --radius-pill: 9999px; /* Full pill shape for avatars, badges */
+        --radius-none: 0px; /* No rounding, sharp corners */
+
+        /* Z-INDEX */
+        --z-behind: -10; /* behind base (e.g., background shadows or decorative shapes) */
+        --z-base: 0; /* Default stacking context (main content, base layout) */
+        --z-content: 10; /* Standard inline content (cards, list items, etc.) */
+        --z-above: 20; /* Elevated within content (popovers, FABs, floating CTAs) */
+        --z-sticky : 30; /* Sticky navbars, headers, footers */
+        --z-overlay: 40; /* Overlays that obscure the UI (drawers, dim backgrounds) */
+        --z-modal: 100; /* Modal dialogs, alerts */
+        --z-tooltip: 200; /* Tooltips, hover labels (should always be on top) */
+        --z-max: 9999; /* Emergency layer for extreme cases (devtools, toasts, etc.) */
+
+        /* COLORS */
+
+        /* SEMANTIC COLOR - BACKGROUND  */
+        --bg: 0; /* Default background color */
+        --bg-muted: 0; /* Muted background for less emphasis */
+
+        /* SEMANTIC COLOR - FOREGROUND  */
+        --fg: 0; /* Default foreground color on background */
+        --fg-muted: 0; /* Muted foreground color for less emphasis */
+
+        /* SEMANTIC COLOR: INFO */
+        --info-bg: 0;
+        --info-fg: 0; /* info content w/o bg */
+        --info-contrast: 0; /* info content w/ bg */
+        --info-border: 0;
+
+        /* SEMANTIC COLOR: WARNING */
+        --warning-bg: 0;
+        --warning-fg: 0; /* warning content w/o bg */
+        --warning-contrast: 0; /* warning content w/ bg */
+        --warning-border: 0;
+
+        /* SEMANTIC COLOR: ERROR */
+        --error-bg: 0;
+        --error-fg: 0; /* error content w/o bg */
+        --error-contrast: 0; /* error content w/ bg */
+        --error-border: 0;
     }
     
     .dark {

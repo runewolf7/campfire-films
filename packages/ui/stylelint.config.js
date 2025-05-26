@@ -22,7 +22,6 @@ const config = {
         // POSITIONING
         {
           groupName: 'Positioning',
-          emptyLineBefore: 'always',
           properties: [
             'position',
             'inset',
@@ -37,7 +36,6 @@ const config = {
         // DISPLAY & FLEX / GRID
         {
           groupName: 'Layout',
-          emptyLineBefore: 'always',
           properties: [
             'display',
             'visibility',
@@ -70,7 +68,6 @@ const config = {
         // BOX MODEL
         {
           groupName: 'Box Model',
-          emptyLineBefore: 'always',
           properties: [
             'box-sizing',
             'width',
@@ -98,7 +95,6 @@ const config = {
         // TYPOGRAPHY
         {
           groupName: 'Typography',
-          emptyLineBefore: 'always',
           properties: [
             'font',
             'font-family',
@@ -118,7 +114,6 @@ const config = {
         // VISUAL
         {
           groupName: 'Visual',
-          emptyLineBefore: 'always',
           properties: [
             'color',
             'background',
@@ -140,7 +135,6 @@ const config = {
         // ANIMATION
         {
           groupName: 'Animation',
-          emptyLineBefore: 'always',
           properties: [
             'transition',
             'transition-delay',
@@ -156,14 +150,12 @@ const config = {
         // INTERACTION
         {
           groupName: 'Interaction',
-          emptyLineBefore: 'always',
           properties: ['cursor', 'pointer-events', 'user-select'],
         },
   
         // MISC
         {
           groupName: 'Misc',
-          emptyLineBefore: 'always',
           properties: ['appearance', 'content', 'clip'],
         },
       ],
