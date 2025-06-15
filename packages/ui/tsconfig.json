@@ -1,0 +1,11 @@
+{
+  "extends": "@campfire/config-ts/react-library.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@campfire/ui/*": ["./src/*"]
+    }
+  },
+  "include": [".", ".stylelint.config.js"],
+  "exclude": ["node_modules", "dist"]
+}
