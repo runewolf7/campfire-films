@@ -39,7 +39,7 @@ export function Hero() {
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         {/* Company name with retro styling and fire glow */}
         <div className="mb-8">
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-wider mb-4 relative">
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-wider mb-4 relative font-heading">
             <span
               className="bg-gradient-to-r from-orange-400 via-red-500 to-orange-600 bg-clip-text text-transparent relative campfire-pulse"
               style={{

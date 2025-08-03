@@ -87,7 +87,7 @@ export function EmailSignup() {
       <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900/30 to-black" />
 
       <div className="relative z-10 max-w-2xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">
+        <h2 className="text-4xl md:text-5xl font-black mb-8 text-white font-heading">
           Join the <span className="text-orange-400">Campfire</span>
         </h2>
 
@@ -121,7 +121,7 @@ export function EmailSignup() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <h3 className="text-xl font-semibold text-white mb-2">Welcome to the Campfire!</h3>
+            <h3 className="text-xl font-bold text-white mb-2 font-heading">Welcome to the Campfire!</h3>
             <p className="text-white/60">Thanks for joining our creative community.</p>
           </div>
         ) : (

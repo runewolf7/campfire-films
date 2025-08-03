@@ -37,7 +37,7 @@ export function SocialLinks() {
       <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900/50 to-black" />
 
       <div className="relative z-10 max-w-4xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">
+        <h2 className="text-4xl md:text-5xl font-black mb-8 text-white font-heading">
            <span className="text-orange-400">Light </span> it up
         </h2>
 
@@ -62,7 +62,7 @@ export function SocialLinks() {
                 <div className="text-orange-400 mb-4 group-hover:scale-110 transition-transform duration-300">
                   {social.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{social.name}</h3>
+                <h3 className="text-xl font-bold text-white mb-2 font-heading">{social.name}</h3>
                 <p className="text-white/60 group-hover:text-orange-400 transition-colors duration-300">
                   {social.handle}
                 </p>

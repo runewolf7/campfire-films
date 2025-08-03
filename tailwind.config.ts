@@ -12,6 +12,12 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+  		fontFamily: {
+  			'heading': ['var(--font-body)', 'sans-serif'], // Use Roboto for headings too
+  			'body': ['var(--font-body)', 'sans-serif'],
+  			'sans': ['var(--font-body)', 'sans-serif'], // Override default sans with Roboto
+  			'display': ['var(--font-heading)', 'cursive'], // Keep Bungee available as 'font-display'
+  		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Analytics } from "@vercel/analytics/next"
+import { bungee, roboto } from '@/lib/fonts'
 
 import './globals.css'
 
@@ -16,8 +17,8 @@ export default function RootLayout({
   return (
     <>
     <Analytics />
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" className={`${bungee.variable} ${roboto.variable}`}>
+      <body className={roboto.className}>{children}</body>
     </html>
     </>
   )

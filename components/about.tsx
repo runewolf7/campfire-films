@@ -5,7 +5,7 @@ export function About() {
       <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900/30 to-black" />
 
       <div className="relative z-10 max-w-4xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">
+        <h2 className="text-4xl md:text-5xl font-black mb-8 text-white font-heading">
           About <span className="text-orange-400">Us</span>
         </h2>
 

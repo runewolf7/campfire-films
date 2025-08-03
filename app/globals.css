@@ -8,9 +8,7 @@
   }
 
   body {
-    @apply bg-black text-white antialiased;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
-      "Droid Sans", "Helvetica Neue", sans-serif;
+    @apply bg-black text-white antialiased font-body;
   }
 }
 
@@ -20,7 +18,11 @@
   }
 
   .grain {
-    background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.15) 1px, transparent 0);
+    background-image: radial-gradient(
+      circle at 1px 1px,
+      rgba(255, 255, 255, 0.15) 1px,
+      transparent 0
+    );
     background-size: 20px 20px;
   }
 
@@ -35,7 +37,12 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.03) 50%, transparent 100%);
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.03) 50%,
+      transparent 100%
+    );
     background-size: 4px 100%;
     animation: vhs-scan 0.1s linear infinite;
     pointer-events: none;
