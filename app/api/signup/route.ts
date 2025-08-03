@@ -1,27 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { checkBotId } from 'botid/server'
 import { insertEmailSignup, initializeDatabase } from '@/lib/db'
 
 export async function POST(request: NextRequest) {
   try {
     // Initialize database on first request
     await initializeDatabase()
-
-    // Bot protection using Vercel's BotID
-    const verification = await checkBotId()
-    
-    if (verification.isBot) {
-      console.error('Bot signup attempt blocked by BotID:', {
-        email: 'hidden for security',
-        userAgent: request.headers.get('user-agent'),
-        ip: request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip'),
-        timestamp: new Date().toISOString()
-      })
-      return NextResponse.json(
-        { error: 'Access denied' },
-        { status: 403 }
-      )
-    }
 
     // Parse request body
     const body = await request.json()

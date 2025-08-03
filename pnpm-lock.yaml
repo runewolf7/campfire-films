@@ -101,9 +101,6 @@ importers:
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.21(postcss@8.5.6)
-      botid:
-        specifier: ^1.4.5
-        version: 1.4.5(next@15.2.4(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -1242,17 +1239,6 @@ packages:
   binary-extensions@2.3.0:
     resolution: {integrity: sha512-Ceh+7ox5qe7LJuLHoY0feh3pHuUDHAcRUeyL2VYghZwfpkNIy/+8Ocg0a3UuSoYzavmylwuLWQOf3hl0jjMMIw==}
     engines: {node: '>=8'}
-
-  botid@1.4.5:
-    resolution: {integrity: sha512-y+En8M2qD20G4N72A5dZSbtkIW7R0EoYGwK5aQ8hzBVmqPFbIfiOmgL6m3Ec1Ago3jfHWeG29+l520RQCBcEkQ==}
-    peerDependencies:
-      next: '*'
-      react: ^18.0.0 || ^19.0.0
-    peerDependenciesMeta:
-      next:
-        optional: true
-      react:
-        optional: true
 
   brace-expansion@2.0.2:
     resolution: {integrity: sha512-Jt0vHyM+jmUBqojB7E1NIYadt0vI0Qxjxd2TErW94wDz+E2LAm5vKMXXwg6ZZBTHPuUlDgQHKXvjGBdfcF1ZDQ==}
@@ -3051,11 +3037,6 @@ snapshots:
   balanced-match@1.0.2: {}
 
   binary-extensions@2.3.0: {}
-
-  botid@1.4.5(next@15.2.4(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0):
-    optionalDependencies:
-      next: 15.2.4(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      react: 19.1.0
 
   brace-expansion@2.0.2:
     dependencies:

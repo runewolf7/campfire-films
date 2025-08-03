@@ -5,7 +5,7 @@
 This implementation provides a robust email signup system with:
 
 - ✅ Persistent storage using Turso (Serverless SQLite)
-- ✅ Bot protection using Vercel's BotID (Next.js 15.3+ pattern)
+- ✅ Simple and reliable form submission
 - ✅ Proper error handling and user feedback
 - ✅ Server-side logging for monitoring
 - ✅ Duplicate email prevention
@@ -14,11 +14,10 @@ This implementation provides a robust email signup system with:
 
 **Core Files:**
 
-- `next.config.ts` - BotID integration with `withBotId()`
-- `instrumentation-client.ts` - Client-side BotID initialization (Next.js 15.3+)
-- `app/api/signup/route.ts` - Server-side signup handling with `checkBotId()`
+- `next.config.ts` - Next.js configuration
+- `app/api/signup/route.ts` - Server-side signup handling and validation
 - `lib/db.ts` - Turso database operations
-- `components/email-signup.tsx` - Updated frontend component
+- `components/email-signup.tsx` - Frontend form component with analytics
 
 **Database:**
 
