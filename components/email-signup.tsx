@@ -2,28 +2,84 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export function EmailSignup() {
   const [email, setEmail] = useState("")
   const [firstName, setFirstName] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [error, setError] = useState("")
+  const [clientIP, setClientIP] = useState<string | null>(null)
+  const [referrer, setReferrer] = useState<string | null>(null)
+  const [userAgent, setUserAgent] = useState<string | null>(null)
+
+  // Fetch client IP, referrer, and user agent on component mount
+  useEffect(() => {
+    // Get referrer and user agent immediately (synchronous)
+    const currentReferrer = document.referrer || null
+    const currentUserAgent = navigator.userAgent || null
+    setReferrer(currentReferrer)
+    setUserAgent(currentUserAgent)
+
+    // Fetch client IP asynchronously (non-blocking)
+    const fetchClientIP = async () => {
+      try {
+        // Using ipify service (free, no API key required)
+        const response = await fetch('https://api.ipify.org?format=json')
+        const data = await response.json()
+        setClientIP(data.ip)
+      } catch (error) {
+        console.log('Could not fetch client IP:', error)
+        // Not critical - we can still proceed without it
+        setClientIP(null)
+      }
+    }
+
+    // Fire and forget - don't block anything
+    fetchClientIP()
+  }, [])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setError("")
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000))
+    try {
+      const response = await fetch('/api/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          firstName: firstName.trim(),
+          email: email.trim(),
+          clientIP: clientIP,
+          referrer: referrer,
+          userAgent: userAgent,
+        }),
+      })
 
-    setIsSubmitting(false)
-    setIsSubmitted(true)
-    setEmail("")
-    setFirstName("")
+      const data = await response.json()
 
-    // Reset success message after 3 seconds
-    setTimeout(() => setIsSubmitted(false), 3000)
+      if (!response.ok) {
+        throw new Error(data.error || 'Something went wrong')
+      }
+
+      // Success
+      setIsSubmitted(true)
+      setEmail("")
+      setFirstName("")
+
+      // Reset success message after 5 seconds
+      setTimeout(() => setIsSubmitted(false), 5000)
+
+    } catch (err: any) {
+      console.error('Signup error:', err)
+      setError(err.message || 'Something went wrong. Please try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -40,6 +96,23 @@ export function EmailSignup() {
         <p className="text-lg text-white/60 mb-12">
           Be the first to hear about our latest projects, behind-the-scenes content, and creative adventures.
         </p>
+
+        {error && (
+          <div className="p-6 bg-gradient-to-br from-red-900/30 to-red-800/30 border border-red-400/30 rounded-lg mb-6">
+            <div className="text-red-400 mb-4">
+              <svg className="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <p className="text-white text-center">{error}</p>
+            <button
+              onClick={() => setError("")}
+              className="mt-4 text-red-400 hover:text-red-300 text-sm underline block mx-auto"
+            >
+              Try again
+            </button>
+          </div>
+        )}
 
         {isSubmitted ? (
           <div className="p-8 bg-gradient-to-br from-green-900/30 to-green-800/30 border border-green-400/30 rounded-lg">
