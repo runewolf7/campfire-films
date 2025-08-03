@@ -15,7 +15,7 @@ This implementation provides a robust email signup system with:
 **Core Files:**
 
 - `next.config.ts` - BotID integration with `withBotId()`
-- `instrumentation.ts` - Client-side BotID initialization (Next.js 15.3+)
+- `instrumentation-client.ts` - Client-side BotID initialization (Next.js 15.3+)
 - `app/api/signup/route.ts` - Server-side signup handling with `checkBotId()`
 - `lib/db.ts` - Turso database operations
 - `components/email-signup.tsx` - Updated frontend component
